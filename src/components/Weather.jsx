@@ -18,9 +18,9 @@ const Weather = ({ weatherData }) => {
               </div>
               <Card.Body className="p-5">
                 <h4 className="mb-0">{weatherData.name}</h4>
-                <p className="display-2 my-3">{weatherData.main.temp} &deg;C</p>
+                <p className="display-2 my-3">{(weatherData.main.temp - 273.15).toFixed(0)} &deg;C</p>
                 <Card.Text>
-                  Feels Like: <strong>{weatherData.main.feels_like} &deg;C</strong>
+                  Feels Like: <strong>{(weatherData.main.feels_like - 273.15).toFixed(0)} &deg;C</strong>
                 </Card.Text>
                 <Card.Text>
                   Pressure: <strong>{weatherData.main.pressure} &deg;C</strong>
